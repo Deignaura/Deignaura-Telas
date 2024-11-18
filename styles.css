@@ -1,0 +1,18 @@
+ /* Aplica uma cor de fundo em toda a página */
+
+body {
+    background-color:rgb(206, 206, 150); /* Altere para a cor que você desejar */
+
+}
+.page-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da página */
+    background-color:rgb(206, 206, 150) ; /* Cor de fundo opcional */
+}
+
+.container {
+    max-width: 800px; /* Ajusta o tamanho máximo do carrossel */
+    width: 100%;
+}

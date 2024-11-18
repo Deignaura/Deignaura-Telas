@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Aplica uma cor de fundo em toda a página */
+        body {
+            background-color: rgb(209, 209, 201); /* Cor de fundo */
+            margin: 0;
+        }
+
+        .page-container {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Altura total da página */
+        }
+
+        .container {
+            max-width: 1000px; /* Ajusta o tamanho máximo do carrossel */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <header class="bg-dark text-white p-3">
+            <div class="container d-flex justify-content-between">
+                <h1>Meu site</h1>
+                <nav>
+                
+                    <a href="explorer.html" class="text-white mx-2">Explorar</a>
+                    <a href="serie.html" class="text-white mx-2">Série</a>
+                </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explorer.html">Explorar Séries</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-container">
+            <div class="container">
+                <div id="serieCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://br.web.img2.acsta.net/pictures/14/03/28/10/18/433386.jpg" class="d-block w-50 mx-auto" alt="Suits">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Suits</h5>
+                                <p>Um drama jurídico centrado em um advogado brilhante e um novo associado que não possui um diploma de direito.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNDgwOTQxMjUtYmNhZi00MGZlLWFiMmEtODNkNzVjNzZmOWY5XkEyXkFqcGc@._V1_.jpg" class="d-block w-50 mx-auto" alt="The Choice">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>The Choice</h5>
+                                <p>Um romance que explora as escolhas que moldam nossas vidas e o que acontece quando a vida nos dá uma segunda chance.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://br.web.img2.acsta.net/pictures/19/11/26/09/09/5380589.jpg" class="d-block w-50 mx-auto" alt="Anne with an E">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Anne with an E</h5>
+                                <p>A história de uma jovem órfã que luta para encontrar seu lugar no mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#serieCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#serieCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+        <!-- Seção 2: Séries Mais Recentes --
+    
+               
+                <!-- Seção 2: Séries Recentes -->
+<div class="container mt-5">
+    <h2>Séries Recentes</h2>
+    <div class="row">
+        <!-- Card 1: Vilarejo do Amor -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://br.web.img3.acsta.net/c_300_300/pictures/23/04/05/18/07/2480295.jpg" class="card-img-top" alt="Vilarejo do Amor">
+                <div class="card-body">
+                    <h5 class="card-title">Vilarejo do Amor</h5>
+                    <p class="card-text">Uma história sobre encontros e desencontros românticos em um vilarejo cheio de charme e mistério.</p>
+                    <a href="serie.html?id=1" class="btn btn-primary">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2: Casamento às Cegas: Argentina -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://images.ctfassets.net/4cd45et68cgf/328MThHU7E1ZXMQweIr4uU/503f81963d3cf6b50ef8bf3f27d1eaeb/PT-BR_LIB_BRAZIL_S4_MAIN_SQUARE_1X1_RGB_PRE.jpg?w=750" class="card-img-top" alt="Casamento às Cegas: Argentina">
+                <div class="card-body">
+                    <h5 class="card-title">Casamento às Cegas: Argentina</h5>
+                    <p class="card-text">Participantes argentinos tentam encontrar o amor sem ver seus parceiros até o momento do casamento.</p>
+                    <a href="serie.html?id=2" class="btn btn-primary">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Sintonia de Natal -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nvmkr4arrn7vvgmfkw24mn3x/bafkreigaln54e72hfvdxkuygesvj7u6ckfdjrsvygxpxmudzqbo5p6ereq@jpeg" class="card-img-top" alt="Sintonia de Natal">
+                <div class="card-body">
+                    <h5 class="card-title">Sintonia de Natal</h5>
+                    <p class="card-text">Histórias entrelaçadas de amor e amizade durante o período natalino, cheia de emoções e surpresas.</p>
+                    <a href="serie.html?id=3" class="btn btn-primary">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <style>
+                    .carousel-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                </style>
+                
+               
+
+       <!-- Seção 3: Sobre o Criador do Site -->
+<div class="container mt-5">
+    <h2>Sobre Mim</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Inserir Imagem do Computador -->
+            <img src="/minha foto.jpg" alt="Minha Foto" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+            <p>Deignaura, 19 anos, brasileira, estudante de engenharia de software, determinada e sonhadora. Ama música, investigações, viagens e busca realizar grandes conquistas profissionais e pessoais.</p>
+            <p>
+                Entre em contato: 
+                <a href="mailto:deignauragoncalvesribeiro123@gmail.com" target="_blank">Email</a> | 
+                <a href="https://github.com/Deignaura" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+       
+        <!-- Seção: Filmes Favoritos -->
+<div class="container mt-5">
+    <h2>Filmes Favoritos</h2>
+    <div class="row">
+        <div class="container d-flex justify-content-center">
+            <!-- Card 1: Arremessando Alto -->
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZdqHQU-44wSumWeNVbYYOI5kfsnIk29PJX2EdqH-HQ46owjWFSY3zwkG7GTSRM4wOvWlkLxIKEQb7orFw-_CmjJwMjoqD8HNdzHlY2mkP0nF2uhwxGIXT0RunMyIBF7TBWLEg.jpg?r=b8f" class="card-img-top" alt="Arremessando Alto">
+                        <div class="card-body">
+                            <h5 class="card-title">Arremessando Alto</h5>
+                            <p class="card-text">Um olheiro de basquete descobre um jogador talentoso e luta para levá-lo ao sucesso na NBA.</p>
+                            <a href="filme.html?id=1" class="btn btn-primary">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: O Pior Vizinho do Mundo -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://media.gazetadopovo.com.br/2023/05/24120356/O-Pior-Vizinho-do-Mundo-960x540.jpeg" class="card-img-top" alt="O Pior Vizinho do Mundo">
+                        <div class="card-body">
+                            <h5 class="card-title">O Pior Vizinho do Mundo</h5>
+                            <p class="card-text">Uma comédia sobre as desventuras de um homem rabugento e os problemas com seus novos vizinhos.</p>
+                            <a href="filme.html?id=2" class="btn btn-primary">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Lupin -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://cinepop.com.br/wp-content/uploads/2021/01/Lupin-Netflix-Series-1.jpg" class="card-img-top" alt="Lupin">
+                        <div class="card-body">
+                            <h5 class="card-title">Lupin</h5>
+                            <p class="card-text">"Lupin" é uma série francesa de mistério, roubo e vingança inspirada no ladrão Arsène Lupin.</p>
+                            <a href="filme.html?id=3" class="btn btn-primary">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

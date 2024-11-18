@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Séries</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .series-list {
+            margin-top: 20px;
+        }
+        .series-card {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com logo e menu -->
+    <header class="bg-dark text-white p-3">
+        <div class="container d-flex justify-content-between">
+            <h1>Pesquisar Séries</h1>
+            <nav>
+                <a href="index.html" class="text-white mx-2">Início</a>
+                <a href="explorer.html" class="text-white mx-2">Explorar</a>
+                <a href="serie.html" class="text-white mx-2">Série</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container mt-5">
+        <h2>Digite o nome da série</h2>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Pesquisar séries" id="searchInput" onkeyup="filterSeries()">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="filterSeries()">Buscar</button>
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <h3>Filtros</h3>
+        <div class="form-group">
+            <label for="genreFilter">Filtrar por Gênero:</label>
+            <select id="genreFilter" class="form-control" onchange="filterSeries()">
+                <option value="">Todos</option>
+                <option value="acao">Ação</option>
+                <option value="aventura">Aventura</option>
+                <option value="comedia">Comédia</option>
+                <option value="drama">Drama</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="ficcao">Ficção Científica</option>
+                <option value="historico">Histórico</option>
+                <option value="misterio">Mistério</option>
+                <option value="romance">Romance</option>
+                <option value="suspense">Suspense</option>
+                <option value="terror">Terror</option>
+            </select>
+        </div>
+
+        <!-- Lista de Séries -->
+        <div class="row series-list" id="seriesList">
+            <div class="col-md-4 series-card" data-genre="drama">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Suits</h5>
+                        <p class="card-text">Uma série sobre um advogado excepcional e seu associado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 series-card" data-genre="romance">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">The Choice</h5>
+                        <p class="card-text">Uma história de amor que se desenrola ao longo de escolhas difíceis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 series-card" data-genre="drama">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Anne with an E</h5>
+                        <p class="card-text">Uma adaptação do clássico literário sobre uma jovem órfã.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 series-card" data-genre="romance">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Vilarejo do Amor</h5>
+                        <p class="card-text">Uma comédia romântica em um vilarejo encantador.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 series-card" data-genre="reality">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Casamento às Cegas: Argentina</h5>
+                        <p class="card-text">Um reality show sobre amor e casamento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 series-card" data-genre="drama">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sintonia de Natal</h5>
+                        <p class="card-text">Uma história natalina sobre amor e música.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Adicione mais séries aqui -->
+        </div>
+    </section>
+
+    <script>
+        function filterSeries() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const genreFilter = document.getElementById('genreFilter').value;
+            const seriesList = document.getElementById('seriesList');
+            const seriesCards = seriesList.getElementsByClassName('series-card');
+
+            // Loop através dos cards e ocultar aqueles que não correspondem à pesquisa ou filtro
+            for (let i = 0; i < seriesCards.length; i++) {
+                const title = seriesCards[i].getElementsByClassName('card-title')[0].innerText.toLowerCase();
+                const genre = seriesCards[i].getAttribute('data-genre');
+
+                const matchesSearch = title.includes(input);
+                const matchesGenre = genreFilter === "" || genre === genreFilter;
+
+                if (matchesSearch && matchesGenre) {
+                    seriesCards[i].style.display = ""; // Mostra o card
+                } else {
+                    seriesCards[i].style.display = "none"; // Oculta o card
+                }
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
